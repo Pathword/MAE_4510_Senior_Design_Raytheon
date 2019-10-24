@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : helloworldc++.cpp
-// Author      : Dylan
+// Author      : Dylan			Alex was Here
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
