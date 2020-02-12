@@ -17,5 +17,6 @@ public:
 	void rest();
 	void hat();
 	void trophybag();
+	void inventory();
 
 };

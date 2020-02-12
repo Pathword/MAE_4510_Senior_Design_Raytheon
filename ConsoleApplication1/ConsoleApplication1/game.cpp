@@ -2,10 +2,12 @@
 #include <iostream>
 #include <time.h>
 #include "monster.h"
+#include "invent.h"
 
 monster mymonster;	 //init new vars
 bool rested;
 extern game mygame;
+extern int fightcounter;
 
 extern bool over;    //get vars from other files
 extern int hp;
@@ -15,9 +17,12 @@ extern int hatty;
 extern int hpmax;
 extern int demonhorns;
 extern int tb;
+int potions;
 
 void game::enemy()
 {
+	fightcounter++;
+
 	rested = false;
 
 	int rando = rand() % 4;		// gens # btwn 0-3
@@ -60,7 +65,8 @@ void game::shop()
 	std::cout << "4) Leave [you leave the shop] \n\n";
 
 	std::cin >> choice;
-	int potion_add = rand() % 5 + 5;     //generates the strength of the potion btwn 5-10 hp
+	
+	std::cout << "\n";
 
 	switch (choice)
 	{
@@ -71,17 +77,10 @@ void game::shop()
 			break;
 		}
 				
-		hp = hp + potion_add;
-		coin = coin - 10;
+		potions++;
+		
 
-		if (hp > hpmax)
-		{
-			hp = hpmax;
-		}
-
-		std::cout << "You take a bottle filled with strange looking liquid from the shop keeper. ";
-		std::cout << "After a moment of trepedation, you down the potion. At first you nearly wretch, ";
-		std::cout << "but then you begin to feel oddly refreshed.\n\n";
+		std::cout << "You take a bottle filled with strange looking liquid from the shop keeper and add it to your inventory. ";
 
 		break;
 
@@ -150,7 +149,7 @@ void game::shop()
 		std::cout << " You spend 100 XP for it. It may be useless, but you feel good wearing it.\n\n";
 
 	}
-	std::cout << "\nYour health is currently " << hp << "\n\n";
+	std::cout << "\n\nYour health is currently " << hp << "\n\n";
 
 
 }
@@ -180,7 +179,7 @@ void game::rest()
 	{
 		std::cout << "You try to lay down for another nap, but since you just slept you're restless. You get no benefit from resting too long.\n\n";
 	}
-	std::cout << "\nYour health is currently " << hp << "\n\n";
+	std::cout << "\n\nYour health is currently " << hp << "\n\n";
 }
 
 
@@ -217,4 +216,26 @@ void game::trophybag()
 		std::cout << "You don't have any trophies yet!\n";
 	}
 	std::cout << "\n";
+}
+
+void game::inventory()
+{
+	int invchoice;
+	invent myinv;
+
+	std::cout << "\nCurrent weapon:  " << mygame.weapon << "\n";
+	std::cout << "1) Drink potion (" << potions << ")\n";
+
+	std::cout << "\n";
+	std::cin >> invchoice;
+
+	std::cout <<  "\n";
+
+	switch (invchoice)
+	{
+	case 1:
+		myinv.potion();
+
+	}
+	
 }

@@ -12,6 +12,8 @@ int hp = 100;
 int coin = 0;
 int hatty = 0;
 int hpmax = 100;
+int f = 1;				// level
+int fightcounter = 0;
 
 //init boss trophy vars here
 int demonhorns = 0;
@@ -20,8 +22,6 @@ int demonhorns = 0;
 int main()
 {
 	
-
-
 	int choice;
 
 
@@ -35,12 +35,13 @@ int main()
 		}
 
 		std::cout << "----------------\n";
-		std::cout << "HP: " << hp << "   C$: " << coin << "   XP: " << mygame.xp << "\n";
+		std::cout << "HP: " << hp << "   C$: " << coin << "   XP: " << mygame.xp << "  LVL: " << f << "\n";
 		//basic game choices
 		std::cout << "1) Shop\n";
 		std::cout << "2) Fight\n";
 		std::cout << "3) Rest\n";
 		std::cout << "4) Trophy Bag\n";
+		std::cout << "5) Inventory\n";
 		std::cout << "----------------\n";
 		std::cin >> choice;
 		if (choice == 1)
@@ -70,6 +71,10 @@ int main()
 		else if (choice == 4)
 		{
 			mygame.trophybag();
+		}
+		else if (choice == 5)
+		{
+			mygame.inventory();
 		}
 		else if (choice == 1337)		//dev option for working on features
 		{

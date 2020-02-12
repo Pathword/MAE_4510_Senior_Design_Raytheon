@@ -4,16 +4,27 @@
 
 std::string name;
 int atk, bad_health, xp_drop;
+int fightcheck = rand() % 5 + 4;
 
+extern int f;
 extern game mygame;
 extern bool over;
 extern int hp;
+extern int fightcounter;
 
 void monster::skeleton()
 {
 	name = "Undead Skeleton Warrior";
 	bad_health = 25;
 	xp_drop = 10;
+
+	if (fightcounter > fightcheck)
+	{
+		bad_health = bad_health + (f * 5);
+		xp_drop = xp_drop + (f * 2);
+		f++;
+		fightcounter = 0;
+	}
 
 	//intro the enemy
 	std::cout << name << "\n\n";
@@ -60,6 +71,14 @@ void monster::slime()
 	bad_health = 30;
 	xp_drop = 12;
 
+	if (fightcounter > fightcheck)
+	{
+		bad_health = bad_health + (f * 5);
+		xp_drop = xp_drop + (f * 2);
+		f++;
+		fightcounter = 0;
+	}
+
 	//intro the enemy
 	std::cout << name << "\n\n";
 	std::cout << "You hear a sickening gurgle further down the coridore. You struggle to maintain your balance, as the floor becomes slick. Finally, you round a corner and are suddenly faced with a hulking blob in front of you. This must be one of the cave slimes you heard about!\n\n";
@@ -98,6 +117,14 @@ void monster::rat()
 	name = "Giant Rat";
 	bad_health = 20;
 	xp_drop = 5;
+
+	if (fightcounter > fightcheck)
+	{
+		bad_health = bad_health + (f * 5);
+		xp_drop = xp_drop + (f * 2);
+		f++;
+		fightcounter = 0;
+	}
 
 	//intro the enemy
 	std::cout << name << "\n\n";
@@ -138,6 +165,14 @@ void monster::mimic()
 	bad_health = 25;
 	xp_drop = 20;
 
+	if (fightcounter > fightcheck)
+	{
+		bad_health = bad_health + (f * 5);
+		xp_drop = xp_drop + (f * 2);
+		f++;
+		fightcounter = 0;
+	}
+
 	//intro the enemy
 	std::cout << name << "\n\n";
 	std::cout << "You come across a treasure chest deep in the dungeon. It looks fully intact, which seems odd, but you can't control your curiosity. You go to open the chest. As you grab the lock, you notice that this chest has...eyes? And teeth?! But you notice too late! The treasure chest comes to life and opens to show a fang-lined maw.\n\n";
@@ -170,4 +205,3 @@ void monster::mimic()
 		mygame.xp = mygame.xp + xp_drop;
 	}
 }
-
