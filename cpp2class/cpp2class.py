@@ -1,3 +1,5 @@
+import os
+
 
 class cpp_file:
     #initialize object
@@ -12,14 +14,13 @@ class cpp_file:
         #get rid of blank lines
         self.lines = [L for L in lines if L != ""]
 
+
     #getting includes
     def get_includes(self):
         lines = self.lines
         incs = []
         # getting incs
         incs = [L.split("#include ")[-1] for L in lines if L.startswith("#include")]
-
-
 
         clean_inc = []
         # cleaning
@@ -35,21 +36,44 @@ class cpp_file:
 
         self.includes = clean_inc
 
+    """
+    def get_void_references(self):
+        #get ind of each void
+        #in each void, check if other init class is referenced, link void to include file and list member includes 
+        
+        self.void_references = void_references 
+    """
 
     #getting voids
     def get_voids(self):
-        lines = self.lines
-        voids = [L.split("void ")[1] for L in lines if L.startswith("void")]
-        voids_dict = {}
+        #try to looks for voids
+        try:
+            lines = self.lines
+            #looks for open brackets, grab descriptor above
+            voids = [lines[n-1].split("void ")[1] for n in range(len(lines)) if lines[n].startswith("{")]
+            voids_dict = {}
 
-        for void in voids:
-            rel = [void.split("::")[0], void.split("::")[1].replace("()", "")]
-            if rel[0] not in voids_dict.keys():
-                voids_dict.setdefault(rel[0], [rel[1]])
-            else:
-                voids_dict[rel[0]].append(rel[1])
 
-        self.voids = voids_dict
+            for void in voids:
+                rel = [void.split("::")[0], void.split("::")[1].replace("()", "")]
+                if rel[0] not in voids_dict.keys():
+                    voids_dict.setdefault(rel[0], [rel[1]])
+                else:
+                    voids_dict[rel[0]].append(rel[1])
+
+            self.voids = voids_dict
+
+        #try to looks for int main
+        except:
+            for n in range(len(lines)):
+                if "int main()" in lines[n]:
+                    self.voids = {"main":"int main()"}
+        """
+        #if found voids, get void references 
+        if self.voids:
+            self.get_void_references(self.void)
+        """
+
 
     #get attrs fields, simply grabbing lines between indices
     def get_attrs(self):
@@ -61,11 +85,11 @@ class cpp_file:
                 attrs_start = n + 1
                 break
 
-        # iterating forward till first instance of void
+        # iterating forward till first instance of opening bracket, defines a function
         for n in range(0, len(lines)):
-            if lines[n].startswith("void"):
-                # end of attrs, start of void loop
-                attrs_end = n
+            if lines[n].startswith("{"):
+                #end of atts, 2 above first
+                attrs_end = n-1
                 break
 
         attrs = lines[attrs_start:attrs_end]
@@ -108,6 +132,26 @@ class cpp_file:
 
         self.inits = inits_dict
 
+    #get all
+    def get(self):
+        try:
+            self.get_voids()
+        except:
+            self.voids = "ERROR: could not get voids"
+        try:
+            self.get_includes()
+        except:
+            self.includes = "ERROR: could not get includes "
+        try:
+            self.get_externs()
+        except:
+            self.externs = "ERROR: could not get externs"
+        try:
+            self.get_inits()
+        except:
+            self.inits = "ERROR: could not get inits"
+
+
 
 """
 get attributes by init, extern, and void members 
@@ -124,37 +168,143 @@ class h_file:
         self.lines = [L for L in lines if L != ""]
 
 
+    def get_includes(self):
+        lines = self.lines
+        incs = []
+        # getting incs
+        incs = [L.split("#include ")[-1] for L in lines if L.startswith("#include")]
+
+        clean_inc = []
+        # cleaning
+        for inc in incs:
+            """
+            removes = ["\"", ".h", "<", ">"]
+            """
+            removes = ["\""]
+            for r in removes:
+                inc = inc.replace(r, "")
+
+            clean_inc.append(inc)
+
+        self.includes = clean_inc
+
+
+    def get_class(self):
+        lines = self.lines
+        myclass = [L.split("class ")[1] for L in lines if L.startswith("class ")][0]
+        class_dict = {}
+
+        #get indicies of class info
+        for n in range(len(lines)):
+            if lines[n].startswith("{"):
+                for c in range(n,len(lines)):
+                    if lines[c].startswith("}"):
+                        ind = [n,c+1]
+                        break
+
+        #get class lines and clean tabs
+        class_lines = [L.replace("\t","").split(";")[0] for L in lines[ind[0]:ind[1]]]
+        class_voids = [L.split("void ")[1].replace("()","") for L in class_lines if "void " in L]
+
+
+        #get modifier
+        for L in class_lines:
+            if "public" in L:
+                modifier = "public"
+                break
+            elif "private" in L:
+                modifier = "private"
+                break
+            else:
+                modifier = "unknown"
+
+        #get indices of start of void, end of modifier:
+        attr_ind = []
+        for n in range(len(class_lines)-1,0,-1):
+            if class_lines[n].startswith("public") or class_lines[n].startswith("private"):
+                attr_ind.append(n+1)
+
+        for n in range(len(class_lines)):
+            if class_lines[n].startswith("void"):
+                attr_ind.append(n)
+                break
+
+        attrs = {}
+        for n in range(attr_ind[0],attr_ind[1]):
+            type = class_lines[n].split(" ")[0]
+            value = "".join(class_lines[n].split(" ")[1:])
+            attrs.setdefault(value,type)
+
+        self.modifier = modifier
+        self.attrs = attrs
+        self.class_lines = class_lines
+        self.voids = class_voids
+
+
+    def get(self):
+        try:
+            self.get_class()
+        except:
+            self.modifier = "error"
+            self.attrs = "error"
+            self.attr_ind = "error"
+            self.ind = "error"
+            self.class_lines = "error"
+            self.voids = "error"
+
+        try:
+            self.get_includes()
+        except:
+            self.includes = "error"
+
 
 
 def cpp2class(path):
-    game_cpp = cpp_file(path)
-    game_cpp.get_voids()
-    game_cpp.get_includes()
-    game_cpp.get_externs()
-    game_cpp.get_inits()
+    #init obj called cpp
+    cpp = cpp_file(path)
+    #perform get
+    cpp.get()
 
-    print(game_cpp.voids)
-    print(game_cpp.includes)
-    print(game_cpp.externs)
-    print(game_cpp.inits)
-
-    return game_cpp
+    return cpp
 
 
-#pass filename and lines
+def h2class(path):
+    #init obj called h
+    h = h_file(path)
+    #perform get
+    h.get()
 
-path1 = "C:\\Users\\dcopley\\Desktop\\Python Stuff\\test\\game_cpp.txt"
-path2 = "C:\\Users\\dcopley\\Desktop\\Python Stuff\\test\\boss_cpp.txt"
-path3 = "C:\\Users\\dcopley\\Desktop\\Python Stuff\\test\\bossmonsters_cpp.txt"
-path4 = "C:\\Users\\dcopley\\Desktop\\Python Stuff\\test\\invent_cpp.txt"
-path5 = "C:\\Users\\dcopley\\Desktop\\Python Stuff\\test\\monster_cpp.txt"
+    return h
 
-paths = [path1,path2,path3,path4,path5]
 
-all_classes = {}
+"""
+simply grab path, locate h and cpp files and read 
+"""
+#path of directory to analyze specified using GUI/explorer editor
+path = "C:\\Users\\Dylan\\Documents\\School\\UCCS\\Classes\\2019\\Fall 2019\\MAE 4510\\Github\\MAE_4510_Senior_Design_Raytheon\\cpp2class\\cpp2txt"
 
-for path in paths:
-    myclass = cpp2class(path)
+#set cwd
+os.chdir(path)
+#get files
+files = os.listdir(path)
 
-    all_classes.setdefault(path,myclass)
+#get h and cpp files
+h_files = [f for f in files if f[-2:] == ".h"]
+cpp_files = [f for f in files if f[-4:] == ".cpp"]
 
+"""
+#get classes from h files
+h_classes = {}
+for file in h_files:
+    h_classes.setdefault(file,h2class(path+"\\"+file))
+"""
+
+#get classes from cpp files
+cpp_classes = {}
+for file in cpp_files:
+    cpp_classes.setdefault(file,cpp2class(path+"\\"+file))
+
+#get classes from h files
+h_classes = {}
+for file in h_files:
+    h_classes.setdefault(file,h2class(path+"\\"+file))
