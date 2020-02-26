@@ -44,7 +44,7 @@ class cpp_file:
         self.void_references = void_references 
     """
 
-    #getting voids
+    #getting voids and void references
     def get_voids(self):
         #try to looks for voids
         try:
@@ -55,19 +55,50 @@ class cpp_file:
 
 
             for void in voids:
-                rel = [void.split("::")[0], void.split("::")[1].replace("()", "")]
+                rel = [void.split("::")[0], void.split("::")[1]]
                 if rel[0] not in voids_dict.keys():
                     voids_dict.setdefault(rel[0], [rel[1]])
                 else:
                     voids_dict[rel[0]].append(rel[1])
 
             self.voids = voids_dict
+            self.parent = False
+            #gets void associations, may not be necessary if only grabbing include associations
+
+            #get voids and content of void, analyze void_ind later to get member attributions
+            void_ind = {}
+            for n in range(len(lines)):
+                if lines[n].startswith("{"):
+                    for c in range(n, len(lines)):
+                        if lines[c].startswith("}"):
+                            member = lines[n-1].split("void ")[1]
+                            void_ind.setdefault(member,lines[n: c+1])
+                            n = c
+                            break
+
+            """
+            void_assoc = {}
+            #look at all attributes
+            for void in list(void_ind.keys()):
+                void_lines = void_ind[void]
+                assoc = []
+                #for each line in void_lines
+                for L in void_lines:
+                    #for each attr key 
+                    for attr in list(self.attrs.keys()):
+                        if attr in L:
+            """
+
+            
+            self.voidind = void_ind
+
 
         #try to looks for int main
         except:
             for n in range(len(lines)):
                 if "int main()" in lines[n]:
                     self.voids = {"main":"int main()"}
+                    self.parent = True
         """
         #if found voids, get void references 
         if self.voids:
@@ -132,6 +163,7 @@ class cpp_file:
 
         self.inits = inits_dict
 
+
     #get all
     def get(self):
         try:
@@ -150,7 +182,11 @@ class cpp_file:
             self.get_inits()
         except:
             self.inits = "ERROR: could not get inits"
-
+        #list all attributes regardless of inits or externs
+        try:
+            self.attrs ={**self.inits,**self.externs}
+        except:
+            self.attrs = "ERROR: could not concatenate initialized and external variables"
 
 
 """
@@ -281,7 +317,7 @@ def h2class(path):
 simply grab path, locate h and cpp files and read 
 """
 #path of directory to analyze specified using GUI/explorer editor
-path = "C:\\Users\\Dylan\\Documents\\School\\UCCS\\Classes\\2019\\Fall 2019\\MAE 4510\\Github\\MAE_4510_Senior_Design_Raytheon\\cpp2class\\cpp2txt"
+path = "C:\\Users\\dcopley\\Documents\\GitHub\\MAE_4510_Senior_Design_Raytheon\\ConsoleApplication1\\ConsoleApplication1"
 
 #set cwd
 os.chdir(path)

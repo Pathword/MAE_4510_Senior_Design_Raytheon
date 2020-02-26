@@ -1,15 +1,8 @@
+from wand.image import Image
 
+f = "C:\\Users\\dcopley\\Documents\\Compiler\\ANTH\\Colin Wren\\APR Colin Wren 2016.pdf"
 
-class members:
-    def __init__(self,k):
-        self.k = k
-
-    def addsubclass(self,value):
-        self.n = value
-
-class a:
-    def __init__(self,path):
-        self.path = path
-
-    def addsubclass(self,value):
-        self.members = members(value)
+with(Image(filename=f, resolution=120)) as source:
+    for i, image in enumerate(source.sequence):
+        newfilename = f[:-4] + str(i + 1) + '.jpeg'
+        Image(image).save(filename=newfilename)
