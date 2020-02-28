@@ -14,8 +14,7 @@ class cpp_file:
         #get rid of blank lines
         self.lines = [L for L in lines if L != ""]
 
-
-    #getting includes
+    # getting includes
     def get_includes(self):
         lines = self.lines
         incs = []
@@ -36,6 +35,63 @@ class cpp_file:
 
         self.includes = clean_inc
 
+    #get attrs fields, simply grabbing lines between indices
+    def get_attrs(self):
+        lines = self.lines
+        # iterating backwards till first instance include
+        for n in range(len(lines) - 1, 0, -1):
+            if lines[n].startswith("#include"):
+                # end of includes, start of attribute
+                attrs_start = n + 1
+                break
+
+        # iterating forward till first instance of opening bracket, defines a function
+        for n in range(0, len(lines)):
+            if lines[n].startswith("{"):
+                #end of atts, 2 above first
+                attrs_end = n-1
+                break
+
+        attrs = lines[attrs_start:attrs_end]
+        attrs = [L.split(";")[0] for L in attrs if L != ""]
+        attrs = [L.replace("::", " ") for L in attrs]
+
+
+        #grab just externs
+        externs_dict = {}
+        # get externs
+        externs = [L.split("extern ")[-1] for L in attrs if L.startswith("extern")]
+        for ext_var in externs:
+            rel = [ext_var.split(" ")[0], ext_var.split(" ")[1]]
+
+            if rel[0] not in externs_dict.keys():
+                # key is type, value is list of instances
+                externs_dict.setdefault(rel[1], rel[0])
+            else:
+                print("error: found extra extern")
+
+        self.externs = externs_dict
+
+
+        #grab justinits
+        inits_dict = {}
+        # get initialized vars
+        inits = [L for L in attrs if L.startswith("extern") == False]
+        for inits_var in inits:
+            rel = [inits_var.split(" ")[0], inits_var.split(" ")[1]]
+
+            if rel[0] not in inits_dict.keys():
+                inits_dict.setdefault(rel[1], rel[0])
+            else:
+                print("error: found extra init")
+
+        self.inits = inits_dict
+
+        #concentate
+        self.attrs = {**self.inits,**self.externs}
+
+
+
     """
     def get_void_references(self):
         #get ind of each void
@@ -49,6 +105,8 @@ class cpp_file:
         #try to looks for voids
         try:
             lines = self.lines
+            attrs = self.attrs
+
             #looks for open brackets, grab descriptor above
             voids = [lines[n-1].split("void ")[1] for n in range(len(lines)) if lines[n].startswith("{")]
             voids_dict = {}
@@ -76,21 +134,39 @@ class cpp_file:
                             n = c
                             break
 
-            """
+            self.void_ind = void_ind
+
+
+            includes = [inc.replace(".h", "") for inc in self.includes]
+
+            include_vars = {}
+            for var in list(attrs.keys()):
+                if attrs[var] in includes:
+                    include_vars.setdefault(var,attrs[var])
+
+            self.include_vars = include_vars
             void_assoc = {}
-            #look at all attributes
+            #look at all voids
             for void in list(void_ind.keys()):
+                #decalre void lines
                 void_lines = void_ind[void]
+                #declare list of associations
                 assoc = []
                 #for each line in void_lines
                 for L in void_lines:
-                    #for each attr key 
-                    for attr in list(self.attrs.keys()):
-                        if attr in L:
-            """
+                    #for each include
+                    for inc in list(include_vars.keys()):
+                        #if inc found in L
+                        if inc in L:
+                            #check for doubles
+                            if include_vars[inc] not in assoc:
+                                assoc.append(include_vars[inc])
 
-            
-            self.voidind = void_ind
+                        void_assoc.setdefault(void,assoc)
+
+
+            self.void_assoc = void_assoc
+
 
 
         #try to looks for int main
@@ -106,88 +182,23 @@ class cpp_file:
         """
 
 
-    #get attrs fields, simply grabbing lines between indices
-    def get_attrs(self):
-        lines = self.lines
-        # iterating backwards till first instance include
-        for n in range(len(lines) - 1, 0, -1):
-            if lines[n].startswith("#include"):
-                # end of includes, start of attribute
-                attrs_start = n + 1
-                break
-
-        # iterating forward till first instance of opening bracket, defines a function
-        for n in range(0, len(lines)):
-            if lines[n].startswith("{"):
-                #end of atts, 2 above first
-                attrs_end = n-1
-                break
-
-        attrs = lines[attrs_start:attrs_end]
-        attrs = [L.split(";")[0] for L in attrs if L != ""]
-        attrs = [L.replace("::", " ") for L in attrs]
-
-        return attrs
-
-    #getting external variables
-    def get_externs(self):
-        #grabbing attrs
-        attrs = self.get_attrs()
-        externs_dict = {}
-        # get externs
-        externs = [L.split("extern ")[-1] for L in attrs if L.startswith("extern")]
-        for ext_var in externs:
-            rel = [ext_var.split(" ")[0], ext_var.split(" ")[1]]
-
-            if rel[0] not in externs_dict.keys():
-                # key is type, value is list of instances
-                externs_dict.setdefault(rel[1], rel[0])
-            else:
-                print("error: found extra extern")
-
-        self.externs = externs_dict
-
-    #getting initialized variables
-    def get_inits(self):
-        attrs = self.get_attrs()
-        inits_dict = {}
-        # get initialized vars
-        inits = [L for L in attrs if L.startswith("extern") == False]
-        for inits_var in inits:
-            rel = [inits_var.split(" ")[0], inits_var.split(" ")[1]]
-
-            if rel[0] not in inits_dict.keys():
-                inits_dict.setdefault(rel[1], rel[0])
-            else:
-                print("error: found extra init")
-
-        self.inits = inits_dict
 
 
     #get all
     def get(self):
-        try:
-            self.get_voids()
-        except:
-            self.voids = "ERROR: could not get voids"
+
         try:
             self.get_includes()
         except:
             self.includes = "ERROR: could not get includes "
         try:
-            self.get_externs()
-        except:
-            self.externs = "ERROR: could not get externs"
-        try:
-            self.get_inits()
-        except:
-            self.inits = "ERROR: could not get inits"
-        #list all attributes regardless of inits or externs
-        try:
-            self.attrs ={**self.inits,**self.externs}
+            self.get_attrs()
         except:
             self.attrs = "ERROR: could not concatenate initialized and external variables"
-
+        try:
+            self.get_voids()
+        except:
+            self.voids = "ERROR: could not get voids"
 
 """
 get attributes by init, extern, and void members 

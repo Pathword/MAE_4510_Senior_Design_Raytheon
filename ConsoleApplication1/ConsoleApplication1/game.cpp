@@ -5,6 +5,7 @@
 #include "invent.h"
 
 monster mymonster;	 //init new vars
+invent myinv;
 bool rested;
 extern game mygame;
 extern int fightcounter;
@@ -221,7 +222,6 @@ void game::trophybag()
 void game::inventory()
 {
 	int invchoice;
-	invent myinv;
 
 	std::cout << "\nCurrent weapon:  " << mygame.weapon << "\n";
 	std::cout << "1) Drink potion (" << potions << ")\n";
