@@ -1,0 +1,179 @@
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.cpp'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.cpp, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.h'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.cpp'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.cpp, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp, Line: 6 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h'
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.cpp'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.cpp, Line: 2 #include <iostream> ignored--file not found.
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.cpp, Line: 3 #include <time.h> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.cpp'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h, Line: 2 #include <iostream> ignored--file not found.
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.cpp, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.cpp'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.cpp, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.cpp'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.cpp, Line: 1 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+Collect Macros from include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h'
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h'
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.h'
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h, Line: 2 #include <iostream> ignored--file not found.
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+
+Collect Macros 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Collect Macros Done. See detailed report in the log file.
+
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.cpp'
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.cpp, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Adding package 'ConsoleApplication1' to project 'Project'. ok.
+Analyzing class 'boss' from File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h, Line: 2
+Adding class 'boss' to package 'ConsoleApplication1'. ok.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+Analyzing class 'game' from File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 4
+Adding class 'game' to package 'ConsoleApplication1'. ok.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.h'
+Analyzing class 'monster' from File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h, Line: 2
+Adding class 'monster' to package 'ConsoleApplication1'. ok.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+Analyzing class 'bossmonsters' from File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.h, Line: 2
+Adding class 'bossmonsters' to package 'ConsoleApplication1'. ok.
+Analyzing class 'Uinterface' from File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 5
+Adding class 'Uinterface' to package 'ConsoleApplication1'. ok.
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.cpp'
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.cpp, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp, Line: 6 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h'
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.cpp'
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.cpp, Line: 2 #include <iostream> ignored--file not found.
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.cpp, Line: 3 #include <time.h> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+Analyzing class 'invent' from File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h, Line: 3
+Adding class 'invent' to package 'ConsoleApplication1'. ok.
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.cpp'
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h, Line: 2 #include <iostream> ignored--file not found.
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.cpp, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.cpp'
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.cpp, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.cpp'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.cpp, Line: 1 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+Reverse Engineering include file 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h'
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\boss.h'
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\bossmonsters.h'
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\game.h, Line: 2 #include <iostream> ignored--file not found.
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\invent.h, Line: 2 #include <iostream> ignored--file not found.
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\monster.h'
+
+Reverse Engineering 'C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h'
+File: C:\Users\Dylan\Documents\School\UCCS\Classes\2020\MAE Final\ConsoleApplication1\ConsoleApplication1\Uinterface.h, Line: 2 #include <iostream> ignored--file not found.
+
+Reverse Engineering Done. See detailed report in the log file.
+
+Creating Diagrams.
+
+Creating Diagram for Project Project.
+
+Creating Diagram for Package ConsoleApplication1.
+
+Creating Diagrams Done.
+
