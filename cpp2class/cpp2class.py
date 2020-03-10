@@ -328,7 +328,7 @@ def h2class(path):
 simply grab path, locate h and cpp files and read 
 """
 #path of directory to analyze specified using GUI/explorer editor
-path = "C:\\Users\\dcopley\\Documents\\GitHub\\MAE_4510_Senior_Design_Raytheon\\ConsoleApplication1\\ConsoleApplication1"
+path = "C:\\Users\\Dylan\\Documents\\School\\UCCS\\Classes\\2019\\Fall 2019\\MAE 4510\\Github\\MAE_4510_Senior_Design_Raytheon\\ConsoleApplication1\\ConsoleApplication1"
 
 #set cwd
 os.chdir(path)

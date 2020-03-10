@@ -1,0 +1,116 @@
+I-Logix-RPY-Archive version 8.15.0 * 9835550
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 13;
+	- value = "boss.cpp" 3.10.2020::17:45:57
+	"boss.h" 2.23.2020::19:21:26
+	"bossmonsters.cpp" 3.10.2020::17:46:0
+	"bossmonsters.h" 2.23.2020::19:21:26
+	"consoleapplication1.cpp" 3.10.2020::18:52:29
+	"game.cpp" 3.10.2020::17:45:40
+	"game.h" 2.23.2020::19:21:26
+	"invent.cpp" 3.10.2020::17:46:0
+	"invent.h" 2.23.2020::19:21:26
+	"monster.cpp" 3.10.2020::17:45:32
+	"monster.h" 2.23.2020::19:21:26
+	"uinterface.cpp" 3.10.2020::18:46:58
+	"uinterface.h" 3.10.2020::18:44:10
+	
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 2;
+	- value = "GUID 7c7a117b-d271-4643-89d7-12ed9427ca82" "GUID 5d80704b-3f9b-4b6d-81ad-6ccbe7ec761b"
+	"GUID 923fb878-a2de-4cdd-b23d-2e01c282cdd6" "GUID 5d80704b-3f9b-4b6d-81ad-6ccbe7ec761b"
+	
+}
+- size = 12;
+- hElement = { IHandle 
+	- _m2Class = "IProject";
+	- _name = "Project";
+	- _id = GUID 5d80704b-3f9b-4b6d-81ad-6ccbe7ec761b;
+}
+- genTime = 3.10.2020::18:52:28;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\ConsoleApplication1.sbsx";
+	- _subsystem = "ConsoleApplication1";
+	- _name = "invent";
+	- _id = GUID ee90cf4b-585d-4bb7-9fb6-17f1838f9f76;
+}
+- genTime = 3.10.2020::18:52:29;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\ConsoleApplication1.sbsx";
+	- _subsystem = "ConsoleApplication1";
+	- _name = "game";
+	- _id = GUID 5fd3294f-2e19-4f4d-95c3-edac57e66b3d;
+}
+- genTime = 3.10.2020::18:52:29;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\ConsoleApplication1.sbsx";
+	- _subsystem = "ConsoleApplication1";
+	- _name = "monster";
+	- _id = GUID 0c6811dc-76ac-4db6-a2d1-66358991c6de;
+}
+- genTime = 3.10.2020::18:52:29;
+- hElement = { IHandle 
+	- _m2Class = "IFile";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\Files\\time";
+	- _id = GUID 6d2745b1-0d38-4f4b-812f-efe681cbc952;
+}
+- genTime = 3.10.2020::18:52:28;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\DefaultConfig";
+	- _id = GUID a9c9ebea-73a1-4b6a-a5ff-7576c5c7e50f;
+}
+- genTime = 3.10.2020::18:52:29;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\ConsoleApplication1.sbsx";
+	- _subsystem = "ConsoleApplication1";
+	- _name = "Uinterface";
+	- _id = GUID 6793632e-1149-4904-9787-4d7b49177648;
+}
+- genTime = 3.10.2020::18:52:29;
+- hElement = { IHandle 
+	- _m2Class = "IFile";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\Files\\iostream";
+	- _id = GUID 707de67b-17c7-4dac-aaa5-314f5d9bee91;
+}
+- genTime = 3.10.2020::18:52:28;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\ConsoleApplication1.sbsx";
+	- _name = "ConsoleApplication1";
+	- _id = GUID 923fb878-a2de-4cdd-b23d-2e01c282cdd6;
+}
+- genTime = 3.10.2020::18:52:29;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\ConsoleApplication1.sbsx";
+	- _subsystem = "ConsoleApplication1";
+	- _name = "boss";
+	- _id = GUID 4bd5bf0d-a246-4209-846e-dbd2204c0f29;
+}
+- genTime = 3.10.2020::18:52:29;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\ConsoleApplication1.sbsx";
+	- _subsystem = "ConsoleApplication1";
+	- _name = "bossmonsters";
+	- _id = GUID 2aeaf472-b659-4383-9be3-20911cc8ad36;
+}
+- genTime = 3.10.2020::18:52:29;
+- hElement = { IHandle 
+	- _m2Class = "IFolder";
+	- _filename = ".\\..\\..\\..\\..\\..\\..\\..\\..\\IBM\\Rational\\Rhapsody\\8.3.1x64\\Project\\Project_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\Files";
+	- _id = GUID 14f3b6bc-55c1-49d0-a340-12fbe9624cc3;
+}
+- genTime = 3.10.2020::18:52:28;
+
